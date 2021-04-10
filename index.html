@@ -4,10 +4,67 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>TO DO</T></title>
+   <link rel="stylesheet" href="css/style.css">
+   <title>TO DO</title>
 </head>
 <body>
-   <header></header>
-   <main></main>
+   <header class="flex">
+      <div class="logo">
+         <img src="image/logo.png" alt="logo senla">
+      </div>
+      <div class="search">
+         <form action="#" method="get">
+            <input type="search" name="search" id="search" class="magnifier" placeholder="&#128269;    Search task for to do">
+         </form>
+      </div>
+   </header>
+   <main>
+      <div class="substrate__image">
+         <img src="image/taking_notes.png" alt="фоновое изображение">
+      </div>
+      <div class="submenu flex">
+         <div class="components">
+            <div class="components__line">
+               <hr>
+            </div>
+            <div class="components__text">
+              <p>All</p> 
+            </div>
+         </div>
+         <div class="components">
+            <div class="components__line">
+               <hr>
+            </div>
+            <div class="components__text">
+              <p>Active</p> 
+            </div>
+         </div>
+         <div class="components">
+            <div class="components__line">
+               <hr>
+            </div>
+            <div class="components__text">
+              <p>Done</p> 
+            </div>
+         </div>
+         <div class="line">
+            <hr>
+         </div>
+      </div>
+      <div class="task">
+         <div class="task__text">
+            <p>
+               New Task
+            </p>
+         </div>
+         <div class="task__form">
+            <form action="#" method="get">
+               <textarea name="text" id="text" class="form"></textarea>
+            </form>
+         </div>
+        <button class="task__button">Add</button>
+      </div>
+   </main>
+   <script src="js/index.js"></script>
 </body>
 </html>
