@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  background-color: #e5e5e5;
+  font-family: "Roboto", Courier, monospace;
+  color: #53565a;
+}
+
+header {
+  margin-top: 22px;
+  margin-left: 23px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  margin-right: 20px;
+  height: 44px;
+  width: 174px;
+}
+
+input[type="search"] {
+  width: 528px;
+  height: 40px;
+  padding: 9px 10px 10px 15px;
+  background: linear-gradient(0deg, #f6f6f6, #f6f6f6), #fefefe;
+  border: 1px solid #e2e2e2;
+  box-sizing: border-box;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+/* main */
+.substrate__image {
+  position: absolute;
+  height: 735px;
+  width: 903px;
+  top: 218px;
+  left: 531px;
+}
+
+.submenu {
+  height: 50px;
+  width: 759px;
+  margin-top: 31px;
+  margin-left: 40px;
+}
+
+.line hr {
+  width: 178px;
+}
+
+.components {
+  width: 175px;
+  &__line {
+    background: #e2e2e2;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.05);
+  }
+  &__text {
+    margin-top: 19px;
+    text-align: center;
+    p {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 19px;
+      color: #53565a;
+      opacity: 0.5;
+    }
+  }
+}
+
+.task{
+   margin-left: 47px;
+   margin-top: 18px;
+   &__text{
+      font-size: 12px;
+      line-height: 15px;
+      color: #706E6B;
+   }
+   &__form{
+      margin-bottom: 11px;
+      .form{
+         position: relative;
+         width: 759px;
+         height: 90px;
+         background: #FFFFFF;
+         border: 1px solid #DDDBDA;
+         box-sizing: border-box;
+         border-radius: 4px;
+         z-index: 3;
+      }
+      
+   }
+   &__button{
+      width: 191px;
+      height: 36px;
+      background: #2F80ED;
+      outline: none;
+      border: none;
+      margin-left: 568px;
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14)), drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.12)), drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.2));
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.75px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+   }
+}
