@@ -13,7 +13,7 @@
          <img src="image/logo.png" alt="logo senla">
       </div>
       <div class="search">
-         <form action="#" method="get">
+         <form>
             <input type="search" name="search" id="search" class="magnifier" placeholder="&#128269;    Search task for to do">
          </form>
       </div>
@@ -58,11 +58,17 @@
             </p>
          </div>
          <div class="task__form">
-            <form action="#" method="get">
-               <textarea name="text" id="text" class="form"></textarea>
+            <form  onsubmit="return false">
+               <textarea name="text" id="text" class="form__todo"></textarea>
+               <button class="task__button" id="task__button">Add</button>
             </form>
          </div>
-        <button class="task__button">Add</button>
+        
+      </div>
+      <div class="list">
+         <ul id="list__Todo">
+       
+          </ul>
       </div>
    </main>
    <script src="js/index.js"></script>
