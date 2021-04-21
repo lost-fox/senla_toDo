@@ -128,4 +128,56 @@ todoSearch.oninput = function(){
    }
 
    console.log (list);
+
 }
+
+// переключение по вкладкам
+
+let tab = function(){
+   let tabNav = document.querySelectorAll('.components');
+      // tabContent = document.querySelectorAll('.')
+   let tabName;
+
+      tabNav.forEach(item =>{
+         item.addEventListener('click', selectTabNav)
+      });
+
+      function selectTabNav(){
+         tabNav.forEach(item =>{
+            item.classList.remove('is-active');
+         });
+         this.classList.add('is-active');
+         tabName = this.getAttribute('data-tab-name');
+        selectTabContent (tabName);
+        //console.log (tabName);
+      }
+
+      function selectTabContent (tabName){
+         let list = document.querySelectorAll ('.case');
+         switch (tabName){
+            case 'tab-1':  
+            list.forEach(item =>{
+               item.classList.remove('tab');
+            });
+            break;
+            case 'tab-2':  
+            list.forEach(item =>{
+               item.classList.remove('tab');
+               if (item.className.indexOf("checked") !== -1){
+                  item.classList.add('tab');
+               }
+            });
+            break;
+            case 'tab-3':  
+            list.forEach(item =>{
+               item.classList.remove('tab');
+               if (item.className.indexOf("checked") == -1){
+                  item.classList.add('tab');
+               }
+            });
+            break;
+         }
+      }    
+};
+
+tab();

@@ -9,7 +9,7 @@
 }
 
 body {
-  max-width: 1440px;
+  max-width: calc (360px + (1440 - 360) * ((100vw - 360px) / (1440 - 360)));
   min-height: 1024px;
   background-color: #fff;
   font-family: "Roboto", Courier, monospace;
@@ -86,14 +86,38 @@ input[type="search"] {
     
     width: 175px;
     background-color: #fff;
-    font-style: normal;
+    p{
+      font-style: normal;
       font-weight: 900;
       font-size: 16px;
       line-height: 19px;
       color: #53565a;
       opacity: 0.5;
+      @media (max-width: 768px) {
+        & {
+          font-size: 22px;
+        }
+      } 
+    }
     
+      
   }
+}
+
+
+
+.is-active{
+  .components__line hr{
+    border: 4px solid #2F80ED;
+  }
+  .components__text {
+    opacity: 1;
+    margin-top: 16px;
+  }
+}
+
+.tab {
+  display: none;
 }
 
 .task {
@@ -103,6 +127,7 @@ input[type="search"] {
     font-size: 12px;
     line-height: 15px;
     color: #706e6b;
+    
   }
   &__form {
     margin-bottom: 11px;
