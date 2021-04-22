@@ -88,8 +88,11 @@ function Task(description){
 //добавление задачи
 
 todoButton.addEventListener('click', (e) => {
+    if (todoInput.value === '') return;
+
    tasks.unshift(new Task(todoInput.value));
 
+  
    updateLocal();
    fillHtmlList();
 
