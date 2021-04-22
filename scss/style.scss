@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  @media (max-width: 320px){
+  @media (max-width: 768px){
     &{
       display: inline-block;
     }
@@ -43,10 +43,11 @@ header {
   margin-right: 20px;
   height: 44px;
   width: 174px;
-  @media (max-width: 320px){
+  @media (max-width: 768px){
     &{
-      margin-left: 33px;
       margin-right: 0px;
+      margin-left: -23px;
+      margin: 0 auto; 
     }
   }
 }
@@ -70,11 +71,16 @@ input[type="search"] {
   box-sizing: border-box;
   box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  @media (max-width: 768px){
+    &{
+       margin-top: 22px;
+      width:  calc(300px + (528 - 300) * (100vw - 400px) / (768 - 400));;
+    }
+  }
   @media (max-width: 320px){
     &{
-      margin-top: 22px;
+     
       margin-left: 2px;
-      width: 250px;
       height: 50px;
     }
   }
@@ -101,11 +107,21 @@ input[type="search"] {
   height: 50px;
   margin-top: 31px;
   margin-left: 40px;
+  @media (max-width: 768px){
+    &{
+      display: flex;
+    }
+  }
+  @media (max-width: 320px){
+    &{
+      display: inline-block;
+    }
+  }
 }
 
 .line hr {
   width: 178px;
-  @media (max-width: 320px){
+  @media (max-width: 768px){
     &{
       display: none;
     }
@@ -289,6 +305,12 @@ input[type="search"] {
       color: #ffffff;
       vertical-align: top;
       display: none;
+      @media (max-width: 768px){
+        &{
+         width: calc(40px + (183 - 40) * ((100vw - 320px) / (768 - 320)));
+         margin-right: 10px;
+        }
+      }
       @media (max-width: 320px){
         &{
          width: 40px;
@@ -297,7 +319,7 @@ input[type="search"] {
       }
       &::before{
          content: 'MARK IMPORTANT';
-         @media (max-width: 320px){
+         @media (max-width: 768px){
           &{
             content: '\2714';
           }
@@ -308,8 +330,10 @@ input[type="search"] {
          background-color: #c2c2c2;
          &::before{
             content: 'NOT IMPORTANT';
-            &{
-              content: '\2718';
+            @media (max-width: 768px){
+              &{
+                content: '\2718';
+              }
             }
          }
       }
