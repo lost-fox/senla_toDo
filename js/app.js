@@ -89,11 +89,12 @@ function Task(description){
 
 todoButton.addEventListener('click', (e) => {
    tasks.unshift(new Task(todoInput.value));
-    
+
    updateLocal();
    fillHtmlList();
 
    todoInput.value = '';
+
 });
 
 // добавление задачи по enter
