@@ -63,7 +63,7 @@ button{
 }
 
 input[type="search"] {
-  width: 528px;
+  width: 588px;
   height: 40px;
   padding: 9px 10px 10px 15px;
   background: linear-gradient(0deg, #f6f6f6, #f6f6f6), #fefefe;
@@ -215,7 +215,7 @@ input[type="search"] {
     margin-bottom: 11px;
     .form__todo {
       position: relative;
-     width: calc(220px + (759 - 220) * ((100vw - 320px) / (1440 - 320)));
+     width: calc(220px + (763 - 220) * ((100vw - 320px) / (1440 - 320)));
       height: 90px;
       background: #ffffff;
       border: 1px solid #dddbda;
@@ -262,7 +262,7 @@ input[type="search"] {
 
 .case {
   height: 80px;
-  width: calc(220px + (728 - 220) * ((100vw - 320px) / (1440 - 320)));
+  width: calc(220px + (750 - 220) * ((100vw - 320px) / (1440 - 320)));
   margin-left: 40px;
   margin-bottom: 18px;
   cursor: pointer;
@@ -283,12 +283,20 @@ input[type="search"] {
   
 
   &.checked {
-   text-decoration-line: line-through;
+    .case__task, li::before{
+      text-decoration-line: line-through;
+    }
+   
    
  }
   .case__button {
-    float: right;
-    
+    margin-left: auto;
+    @media (max-width:768px){
+      position: absolute;
+      bottom: 10px;
+      right: 15px;
+    }
+
     .important__button {
       width: 183px;
       height: 36px;
@@ -308,7 +316,7 @@ input[type="search"] {
       @media (max-width: 768px){
         &{
          width: calc(40px + (183 - 40) * ((100vw - 320px) / (768 - 320)));
-         margin-right: 10px;
+         display: inline;
         }
       }
       @media (max-width: 320px){
@@ -346,6 +354,12 @@ input[type="search"] {
        border-radius: 25px;
        vertical-align: top;
        display: none;
+       @media (max-width: 768px){
+        &{
+          display: inline;
+         
+        }
+      }
     }
   }
   &:hover {
@@ -365,13 +379,26 @@ input[type="search"] {
 }
 
 li{
-   width: calc(150px + (465 - 150) * ((100vw - 320px) / (1440 - 320)));;
+   width: calc(230px + (740 - 230) * ((100vw - 320px) / (1440 - 320)));
    
    &.important {
-   font-weight: bold;
+     .case__task{
+       font-weight: bold;
+     }
+   
    &::before{
-      content: '\2606   '; 
+      content: '\2606'; 
+      margin-right: 5px;
       font-size: 17px;
    } 
 }
+
+.case__task{
+ width: auto;
+  word-wrap: break-word;
+  @media (max-width: 768px){
+    display: inline;
+  }
+}
+
 }

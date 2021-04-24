@@ -16,13 +16,16 @@ let todoElements = [];
 const createElements = (task, index) => {
    return `
    <div class = "case ${task.completed ? 'checked' : ''} ">
+      
+      <li  class = " ${task.important ? 'important' : 'not--important'} flex"   ${task.completed ? 'checked' : ''}>
+      <div class = "case__task"  onclick = "completeTask(${index})"> ${task.description} </div>
       <div class = "case__button">
          <button  onclick = "importantTask(${index})" class= "important__button ${task.important ? 'important' : 'not--important'}"></button>
          <button  onclick = "deleteTask(${index})"  class = "delete__button">
             <img src = "../image/delete.png">
          </button> 
       </div>
-      <li onclick = "completeTask(${index})" class = "${task.important ? 'important' : 'not--important'}"   ${task.completed ? 'checked' : ''}>${task.description}</li>
+      </li>
    </div>
    `
 }
@@ -59,6 +62,7 @@ const completeTask = index =>{
    updateLocal();
    fillHtmlList();
 }
+
 
 // удаляем задачу
 
