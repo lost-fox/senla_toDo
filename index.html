@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>TO DO</title>
+</head>
+<body>
+   <header class="flex">
+      <div class="logo">
+         <img src="image/logo.png" alt="logo senla">
+      </div>
+      <div class="search">
+         <form>
+            <input type="search" name="search"  id="search" class="magnifier" placeholder="&#128269;    Search task for to do">
+         </form>
+      </div>
+   </header>
+   <main>
+      <div class="substrate__image">
+         
+      </div>
+      <div class="submenu flex " id = "filter-todo">
+         <div class="components is-active" data-tab-name="tab-1">
+            <div class="components__line">
+               <hr>
+            </div>
+            <div class="components__text">
+              <p>All</p>
+            </div>
+         </div>
+         <div class="components" data-tab-name="tab-2" >
+            <div class="components__line">
+               <hr>
+            </div>
+            <div class="components__text">
+              <p>Active</p>
+            </div>
+         </div>
+         <div class="components"  data-tab-name="tab-3">
+            <div class="components__line">
+               <hr>
+            </div>
+            <div class="components__text">
+              <p>Done </p>
+            </div>
+         </div>
+         <div class="line">
+            <hr>
+         </div>
+      </div>
+      <div class="task">
+         <div class="task__text">
+            <p>
+               New Task
+            </p>
+         </div>
+         <div class="task__form">
+            <form  onsubmit="return false">
+               <textarea name="text" id="text" class="form__todo" maxlength="40"></textarea>
+               <button class="task__button" id="task__button">Add</button>
+            </form>
+         </div>
+        
+      </div>
+      <div class="list">
+         <ul id="list__Todo">
+       
+          </ul>
+      </div>
+   </main>
+   <script src="js/app.js"></script>
+</body>
+</html>
